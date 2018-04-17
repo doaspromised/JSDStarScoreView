@@ -12,10 +12,14 @@ class ViewController: UIViewController, StarScoreViewDelegate {
     
     func starScoreView(starView: StarScoreView, didChanged newScore: CGFloat) {
         print(newScore)
+        
+        scoreLable.text = "\(newScore * 10.0)分"
     }
     
 
     @IBOutlet weak var starView: StarScoreView!
+    
+    @IBOutlet weak var scoreLable: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
